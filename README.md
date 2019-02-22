@@ -1,6 +1,6 @@
 <img src="https://github.com/jarehec/AirBnB_clone_v3/blob/master/dev/HBTN-hbnb-Final.png" width="160" height=auto />
 
-# AirBnB Clone: Phase # 3
+# AirBnB Clone: Phase # 4
 
 : API with Swagger
 
@@ -217,8 +217,8 @@ github repo
 * Kimberly Wong, [kjowong](https://github.com/kjowong) | [@kjowong](https://twitter.com/kjowong) | [kjowong@gmail.com](kjowong@gmail.com)
 * Carrie Ybay, [hicarrie](https://github.com/hicarrie) | [@hicarrie_](https://twitter.com/hicarrie_)
 * Jared Heck, [jarehec](https://github.com/jarehec) | [@jarehec](https://twitter.com/jarehec)
-* Jinji Zhang [iamzinzi](https://github.com/iamzinzi) | [@hizinzi](https://twitter.com/hizinzi)
-* Jenn Ogden [jogden4195](https://github.com/jogden4195) | [@jogden95](https://twitter.com/jogden95)
+* Jinji Zhang, [iamzinzi](https://github.com/iamzinzi) | [@hizinzi](https://twitter.com/hizinzi)
+* Jenn Ogden, [jogden4195](https://github.com/jogden4195) | [@jogden95](https://twitter.com/jogden95)
 
 ## License
 
