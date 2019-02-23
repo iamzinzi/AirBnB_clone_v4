@@ -23,11 +23,42 @@ $(function () {
 });
 
 $(function () {
-  const url = 'http://0.0.0.0:5001/api/v1/places_search/';
-  $.post(url, {}, function (data, status) {
-     if (status == 'success') {
-       for (let place of data) {
-         $('section.places').after('<article>' + place + '</article>');
-       }
-     }
-   }, 'json');
+  $.ajax({
+    url: 'http://0.0.0.0:5001/api/v1/places_search/',
+    type: 'post',
+    data: JSON.stringify({}),
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    dataType: 'json',
+    success: function (data) {
+      for (let place of data) {
+	let articleText = '<article>' +
+	  '<div class="title">' +
+	  '<h2>' + place.name + '</h2>' +
+	  '<div class="price_by_night">' +
+	  '$' + place.price_by_night + '</div>' +
+	  '</div>' +
+	  '<div class="information">' +
+	  '<div class="max_guest">' +
+	  '<i class="fa fa-users fa-3x" aria-hidden="true"></i>' +
+	  '<br />' +
+	  place.max_guest + ' Guests' +
+	  '</div>' +
+	  '<div class="number_rooms">' +
+	  '<i class="fa fa-bed fa-3x" aria-hidden="true"></i>' +
+	  '<br />' +
+	  place.number_rooms + ' Bedrooms' +
+	  '</div>' +
+	  '<div class="number_bathrooms">' +
+	  '<i class="fa fa-bath fa-3x" aria-hidden="true"></i>' +
+	  '<br />' +
+	  place.number_bathrooms + ' Bathroom' +
+	  '</div>' +
+	  '</div>' +
+	  '</article>'
+	$('section.places').append(articleText);
+      }
+    }
+  });
+});
