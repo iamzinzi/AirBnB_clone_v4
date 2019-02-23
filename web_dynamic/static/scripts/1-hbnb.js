@@ -1,13 +1,12 @@
 $(function () {
-  const listItems = $('input');
   const checkedItems = {};
-  for (let item of listItems) {
-    if (item.is(':checked')) {
-      checkedItems[item.data('data_id')] = item.data('data_name');
+  $('input:checkbox').change(function () {
+    if ($(this).is(':checked')) {
+      checkedItems[$(this).data('id')] = $(this).data('name');
     } else {
-      if (item.data('data_id') in checkedItems) {
-        delete checkedItems[item.data('data_id')];
-      }
+      delete checkedItems[$(this).data('id')];
     }
-  }
+    let filler_text = Object.values(checkedItems).join(', ');
+    $('div.amenities h4').text(filler_text);
+  });
 });
