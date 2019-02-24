@@ -6,7 +6,7 @@ $(function () {
     } else {
       delete checkedItems[$(this).data('id')];
     }
-    let filler_text = Object.values(checkedItems).join(', ');
-    $('div.amenities h4').text(filler_text);
+    let fillerText = Object.values(checkedItems).join(', ');
+    $('div.amenities h4').text(fillerText);
   });
 });
