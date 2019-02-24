@@ -84,8 +84,6 @@ $(function () {
       dataType: 'json',
       success: function (data) {
         $('article').remove();
-        console.log('data is this long');
-        console.log(data.length);
         for (let place of data) {
           let articleText = '<article>' +
               '<div class="title">' +
